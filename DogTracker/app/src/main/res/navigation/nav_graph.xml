@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/trackerFragment">
+
+    <fragment
+        android:id="@+id/trackerFragment"
+        android:name="com.oosca.dogtracker.TrackerFragment"
+        android:label="fragment_tracker"
+        tools:layout="@layout/fragment_tracker" >
+        <action
+            android:id="@+id/action_trackerFragment_to_dogFragment"
+            app:destination="@id/dogFragment" />
+        <action
+            android:id="@+id/action_trackerFragment_to_newDogFragment"
+            app:destination="@id/newDogFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newDogFragment"
+        android:name="com.oosca.dogtracker.NewDogFragment"
+        android:label="fragment_new_dog"
+        tools:layout="@layout/fragment_new_dog" >
+        <action
+            android:id="@+id/action_newDogFragment_to_trackerFragment"
+            app:destination="@id/trackerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dogFragment"
+        android:name="com.oosca.dogtracker.DogFragment"
+        android:label="fragment_dog"
+        tools:layout="@layout/fragment_dog" />
+</navigation>
