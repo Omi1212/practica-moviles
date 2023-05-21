@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/trackerFragment"
-        android:name="com.oosca.dogtracker.ui.TrackerFragment"
+        android:name="com.oosca.dogtracker.ui.dog.TrackerFragment"
         android:label="fragment_tracker"
         tools:layout="@layout/fragment_tracker" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/newDogFragment"
-        android:name="com.oosca.dogtracker.ui.NewDogFragment"
+        android:name="com.oosca.dogtracker.ui.dog.NewDogFragment"
         android:label="fragment_new_dog"
         tools:layout="@layout/fragment_new_dog" >
         <action
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/dogFragment"
-        android:name="com.oosca.dogtracker.ui.DogFragment"
+        android:name="com.oosca.dogtracker.ui.dog.DogFragment"
         android:label="fragment_dog"
         tools:layout="@layout/fragment_dog" />
 </navigation>

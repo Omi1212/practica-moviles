@@ -1,4 +1,4 @@
-package com.oosca.dogtracker.ui
+package com.oosca.dogtracker.ui.dog
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,18 +9,20 @@ import androidx.cardview.widget.CardView
 import androidx.navigation.findNavController
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.oosca.dogtracker.R
+import com.oosca.dogtracker.databinding.FragmentTrackerBinding
 
 class TrackerFragment : Fragment() {
 
     private lateinit var actionToDog: CardView
     private lateinit var actionToNewDog: FloatingActionButton
+    private lateinit var binding: FragmentTrackerBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tracker, container, false)
+        binding = FragmentTrackerBinding.inflate(inflater,container,false)
+        return binding.root
     }
 
 
@@ -32,11 +34,11 @@ class TrackerFragment : Fragment() {
 
 
         actionToDog.setOnClickListener {
-            it.findNavController().navigate(R.id.dogFragment)
+            it.findNavController().navigate(R.id.action_trackerFragment_to_dogFragment)
         }
 
         actionToNewDog.setOnClickListener {
-            it.findNavController().navigate(R.id.newDogFragment)
+            it.findNavController().navigate(R.id.action_trackerFragment_to_newDogFragment)
         }
     }
 
