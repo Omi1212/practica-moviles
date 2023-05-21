@@ -6,15 +6,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.oosca.practica2.R
+import com.oosca.practica2.databinding.FragmentBookBinding
 
 class BookFragment : Fragment() {
-
+    private lateinit var binding: FragmentBookBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_book, container, false)
+    ): View {
+        binding = FragmentBookBinding.inflate(inflater,container,false)
+        return binding.root
     }
 
 }

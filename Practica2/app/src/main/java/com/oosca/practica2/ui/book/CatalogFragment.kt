@@ -9,10 +9,11 @@ import androidx.cardview.widget.CardView
 import androidx.navigation.findNavController
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.oosca.practica2.R
+import com.oosca.practica2.databinding.FragmentCatalogBinding
 
 class CatalogFragment : Fragment() {
 
-
+    private lateinit var binding: FragmentCatalogBinding
     private lateinit var actionToBook: CardView
     private lateinit var actionToNewBook: FloatingActionButton
 
@@ -20,8 +21,8 @@ class CatalogFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_catalog, container, false)
+        binding = FragmentCatalogBinding.inflate(inflater,container,false)
+        return binding.root
     }
 
 

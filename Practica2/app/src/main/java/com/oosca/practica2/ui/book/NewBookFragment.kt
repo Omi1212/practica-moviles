@@ -1,20 +1,64 @@
 package com.oosca.practica2.ui.book
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.oosca.practica2.R
+import com.oosca.practica2.databinding.FragmentNewBookBinding
 
 class NewBookFragment : Fragment() {
+
+    private lateinit var binding: FragmentNewBookBinding
+
+    private val bookViewModel: BookViewModel by activityViewModels {
+        BookViewModel.Factory
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_new_book, container, false)
+    ): View {
+        binding = FragmentNewBookBinding.inflate(inflater,container,false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        setViewModel()
+        observeStatus()
+    }
+
+    private fun setViewModel(){
+        binding.viewmodel = bookViewModel
+    }
+
+    private fun observeStatus(){
+        bookViewModel.status.observe(viewLifecycleOwner) { status ->
+            when{
+                status.equals(BookViewModel.BOOK_CREATED) -> {
+                    Log.d(APP_TAG, status)
+                    Log.d(APP_TAG, bookViewModel.getMovies().toString())
+                    bookViewModel.clearData()
+                    bookViewModel.clearStatus()
+                    findNavController().popBackStack()
+                }
+                status.equals(BookViewModel.WRONG_INFORMATION) -> {
+                    Log.d(APP_TAG, status)
+                    bookViewModel.clearStatus()
+
+                }
+            }
+        }
+    }
+    companion object{
+
+        const val APP_TAG = "APP_TAG"
     }
 
 }
