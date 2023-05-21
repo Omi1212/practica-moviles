@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/catalogFragment"
-        android:name="com.oosca.practica2.ui.book.CatalogFragment"
+        android:name="com.oosca.practica2.ui.book.catalog.CatalogFragment"
         android:label="fragment_catalog"
         tools:layout="@layout/fragment_catalog" >
         <action
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/newBookFragment"
-        android:name="com.oosca.practica2.ui.book.NewBookFragment"
+        android:name="com.oosca.practica2.ui.book.newbook.NewBookFragment"
         android:label="fragment_new_book"
         tools:layout="@layout/fragment_new_book" >
         <action

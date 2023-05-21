@@ -1,4 +1,4 @@
-package com.oosca.practica2.ui.book
+package com.oosca.practica2.ui.book.newbook
 
 import android.os.Bundle
 import android.util.Log
@@ -8,8 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import com.oosca.practica2.R
 import com.oosca.practica2.databinding.FragmentNewBookBinding
+import com.oosca.practica2.ui.book.viewmodel.BookViewModel
 
 class NewBookFragment : Fragment() {
 
@@ -43,7 +43,7 @@ class NewBookFragment : Fragment() {
             when{
                 status.equals(BookViewModel.BOOK_CREATED) -> {
                     Log.d(APP_TAG, status)
-                    Log.d(APP_TAG, bookViewModel.getMovies().toString())
+                    Log.d(APP_TAG, bookViewModel.getBooks().toString())
                     bookViewModel.clearData()
                     bookViewModel.clearStatus()
                     findNavController().popBackStack()

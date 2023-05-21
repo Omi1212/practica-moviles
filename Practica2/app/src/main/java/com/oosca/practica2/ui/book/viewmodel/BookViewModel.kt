@@ -1,8 +1,7 @@
-package com.oosca.practica2.ui.book
+package com.oosca.practica2.ui.book.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProvider.AndroidViewModelFactory.Companion.APPLICATION_KEY
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
@@ -19,8 +18,8 @@ class BookViewModel(private val repository: BookRepository) : ViewModel() {
     var status = MutableLiveData("")
 
 
-    fun getMovies() = repository.getBooks()
-    fun addMovies(book: BookModel) = repository.addMBooks(book)
+    fun getBooks() = repository.getBooks()
+    fun addBooks(book: BookModel) = repository.addMBooks(book)
 
     private fun validateData(): Boolean{
         when{
@@ -45,7 +44,7 @@ class BookViewModel(private val repository: BookRepository) : ViewModel() {
             qualification.value!!
         )
 
-        addMovies(newBooks)
+        addBooks(newBooks)
         clearData()
         status.value = BOOK_CREATED
     }
@@ -58,6 +57,13 @@ class BookViewModel(private val repository: BookRepository) : ViewModel() {
         category.value = ""
         description.value = ""
         qualification.value = ""
+    }
+
+    fun setSelectedBook(book: BookModel){
+        name.value = book.name
+        category.value = book.category
+        description.value = book.description
+        qualification.value = book.qualification
     }
 
     companion object{

@@ -4,7 +4,7 @@
     <data>
         <variable
             name="viewmodel"
-            type="com.oosca.practica2.ui.book.BookViewModel" />
+            type="com.oosca.practica2.ui.book.viewmodel.BookViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
