@@ -1,4 +1,4 @@
-package com.oosca.practica2
+package com.oosca.practica2.ui.book
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.cardview.widget.CardView
 import androidx.navigation.findNavController
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.oosca.practica2.R
 
 class CatalogFragment : Fragment() {
 

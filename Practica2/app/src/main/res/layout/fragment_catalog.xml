@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroundLayout"
-    tools:context=".CatalogFragment">
+    tools:context=".ui.book.CatalogFragment">
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

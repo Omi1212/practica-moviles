@@ -1,7 +1,8 @@
-package com.oosca.practica2
+package com.oosca.practica2.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.oosca.practica2.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
