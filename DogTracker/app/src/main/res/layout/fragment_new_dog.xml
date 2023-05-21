@@ -5,13 +5,13 @@
 
     <data><variable
         name="viewmodel"
-        type="com.oosca.dogtracker.ui.dog.DogViewModel" />
+        type="com.oosca.dogtracker.ui.dog.viewmodel.DogViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.dog.NewDogFragment"
+    tools:context=".ui.dog.newdog.NewDogFragment"
     android:background="@color/backgroundLayout">
 
 

@@ -1,4 +1,4 @@
-package com.oosca.dogtracker.ui.dog
+package com.oosca.dogtracker.ui.dog.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -55,6 +55,13 @@ class DogViewModel(private val repository: DogRepository) : ViewModel() {
         category.value = ""
         description.value = ""
         qualification.value = ""
+    }
+
+    fun setSelectedDog(dog: DogModel){
+        name.value = dog.name
+        category.value = dog.category
+        description.value = dog.description
+        qualification.value = dog.qualification
     }
 
     companion object{

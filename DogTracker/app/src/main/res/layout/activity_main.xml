@@ -6,7 +6,7 @@
     <data>
         <variable
             name="viewmodel"
-            type="com.oosca.dogtracker.ui.dog.DogViewModel" />
+            type="com.oosca.dogtracker.ui.dog.viewmodel.DogViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

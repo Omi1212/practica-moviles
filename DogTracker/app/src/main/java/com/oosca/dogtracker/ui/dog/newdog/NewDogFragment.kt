@@ -1,4 +1,4 @@
-package com.oosca.dogtracker.ui.dog
+package com.oosca.dogtracker.ui.dog.newdog
 
 import android.os.Bundle
 import android.util.Log
@@ -8,8 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import com.oosca.dogtracker.R
 import com.oosca.dogtracker.databinding.FragmentNewDogBinding
+import com.oosca.dogtracker.ui.dog.viewmodel.DogViewModel
 
 class NewDogFragment : Fragment() {
     private val dogViewModel: DogViewModel by activityViewModels {
