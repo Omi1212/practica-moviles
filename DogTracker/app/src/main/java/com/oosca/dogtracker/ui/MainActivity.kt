@@ -1,7 +1,8 @@
-package com.oosca.dogtracker
+package com.oosca.dogtracker.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.oosca.dogtracker.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
